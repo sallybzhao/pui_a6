@@ -1,0 +1,152 @@
+body {
+	font-family: "Alegreya Sans", sans-serif;
+}
+
+.container-fluid {
+	padding: 0;
+	height: 100%;
+}
+
+.cursive {
+	font-family: "Satisfy", "Lobster Two", cursive;
+	font-size: 600%;
+}
+
+#france-hero {
+	width: 100%;
+	position: relative;
+	filter: brightness(0%);
+	z-index: 100;
+}
+
+#france-txt {
+	position: absolute;
+	bottom: 48%;
+	z-index: 101;
+	text-align: center;
+}
+
+#france-sub {
+	position: absolute;
+	bottom: 38%;
+	font-size: 300%;
+	z-index: 101;
+	text-align: center;
+}
+
+#intro-txt {
+	font-size: 200%;
+	width: 100%;
+	margin: 5% auto;
+	text-align: center;
+	padding: 200px 50px;
+}
+
+#lets-go {
+	font-size: 300%;
+	display: none;
+}
+
+#marseille-txt {
+	text-align: center;
+}
+
+.list-group {
+	float: left;
+}
+
+#map {
+	float: right;
+	width: 58.3333%;
+	margin: 0px;
+	padding: 0px;
+	margin-bottom: 5%;
+}
+
+.white {
+	color: #ffffff;
+}
+
+
+/* Responsive Media Queries */
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 1200px) {
+	#france-txt {
+		font-size: 400%;
+		bottom: 60%;
+	}
+
+	#france-sub {
+		font-size: 200%;
+		bottom: 53%;
+	}
+
+	#intro-txt {
+		font-size: 200%;
+		/*width: 70%;*/
+	}
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) { 
+	#france-txt {
+		font-size: 300%;
+		bottom: 73%;
+	}
+
+	#france-sub {
+		font-size: 175%;
+		bottom: 68%;
+	}
+
+	#intro-txt {
+		font-size: 170%;
+		/*width: 80%;*/
+	}
+
+	#map {
+		width: 100%;
+	}
+
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) { 
+	#france-txt {
+		font-size: 300%;
+		bottom: 78%;
+	}
+
+	#france-sub {
+		font-size: 150%;
+		bottom: 74%;
+	}
+
+	#intro-txt {
+		font-size: 150%;
+		/*width: 80%;*/
+	}
+
+	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
