@@ -91,7 +91,6 @@ $(document).ready( function() {
 
 	});
 
-	//$('#marseille-txt').addClass('animated fadeOutRight');
 });
 
 
@@ -162,7 +161,6 @@ function initialize() {
 		}
 	});
 
-	// google.maps.event.addDomListener(window, "load", initialize);
 }
 
 
