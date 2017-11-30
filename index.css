@@ -65,10 +65,15 @@ body {
 	margin: 0 auto 5%;
 }
 
+#site-1 {
+	padding-top: 25%;
+}
+
 .site-txt {
 	font-size: 30%;
-	display: none;
-	width: 70%;
+	text-align: center;
+	width: 100%;
+	padding: 20px 35px 0px;
 }
 
 .arrow {
