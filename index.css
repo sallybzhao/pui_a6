@@ -61,7 +61,7 @@ body {
 	padding-top: 35%;
 	height: 620px;
 	text-align: center;
-	background-color: #d9f2eb;
+	border: 5px solid #d9f2eb;
 	margin: 0 auto 5%;
 }
 
