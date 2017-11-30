@@ -1,23 +1,37 @@
-// set body height
-function setBodyHeight() {
-	var height = $(window).height();
-	$("body").css("height", height);
+// let's go animation
+function checkLetsGo(letsGo) {
+	if (letsGo == true) {
+		return letsGo
+	}
+
+	var windowHeight = $(window).height();
+	// check if intro txt is in the middle-ish of screen
+	var textTop = $("#intro-txt").offset().top - $(window).scrollTop();
+	if (textTop <= windowHeight*0.3 && !letsGo) {
+    	letsGo = true; 
+    	$('#lets-go').css('display', 'inline');
+		$('#lets-go').addClass('animated fadeIn');
+	}
+
+	return letsGo;
 }
 
-// set elements under fixed image (france-hero)
-function setIntroText() {
-	var introTxt = document.getElementById("intro-txt"),
-	image = document.getElementById("france-hero"),
-	imageHeight = window.getComputedStyle(image).getPropertyValue("height");
+// marseille-text animation
+function checkMarseille(marseille) {
+	if (marseille == true) {
+		return marseille
+	}
 
-	introTxt.style.marginTop=imageHeight;
-}
+	var windowHeight = $(window).height();
+	// check if intro txt is in the middle-ish of screen
+	var mapTop = $("#map").offset().top - $(window).scrollTop();
+	if (mapTop <= windowHeight*0.3 && !marseille) {
+    	marseille = true; 
+    	$('#marseille-txt').css('display', 'inline');
+		$('#marseille-txt').addClass('animated zoomIn');
+	}
 
-// set map under intro text
-function mapUnderIntro() {
-	var txtHeight = $("#intro-txt").outerHeight(),
-	map = $("#map");
-	map.css("marginTop", txtHeight);
+	return marseille;
 }
 
 // set height of map to full height of screen
@@ -39,14 +53,13 @@ $(document).ready( function() {
 	// As user scrolls, image brightens
 	var fixed = true;
 	var scrollPosition = 0;
-	var letsGo = false;
+	var letsGo = false, marseille = false;
 
 	// initially set background brightness to 0
 	$('#france-hero').css( "filter",'brightness(0%)' );
 
 	$(this).scroll(function() {
 	    if( $(this).scrollTop() <= 1000 ) {
-	        $('#lets-go').css('display', 'none');
 	        // check scroll status and change image brightness
 	        if ($(this).scrollTop() <= 20 ) {
 	        	$('#france-hero').css( "filter",'brightness(0%)' );
@@ -62,28 +75,19 @@ $(document).ready( function() {
 	    } 
 
 	    // let's go animation
-		var windowHeight = $(window).height();
-
-		// check if intro txt is in the middle-ish of screen
-		var textTop = $("#intro-txt").offset().top - $(window).scrollTop();
-		if (textTop <= windowHeight*0.3 && !letsGo) {
-	    	letsGo = true; 
-	    	$('#lets-go').css('display', 'inline');
-			$('#lets-go').addClass('animated fadeInDown');
-		}
-		if (letsGo == true) {
-			$('#lets-go').css('display', 'inline');
-		}
+	    letsGo = checkLetsGo(letsGo);
+	    // marseille-txt animation
+	    marseille = checkMarseille(marseille);
 
 		// marseille animation
-		var mapTop = $("#map").offset().top - $(window).scrollTop();
-		if (mapTop <= windowHeight*0.2) {
-	    	$('#lets-go').css('display', 'inline');
-			$('#marseille-txt').addClass('animated zoomIn');
-		}
-		if (letsGo == true) {
-			$('#lets-go').css('display', 'inline');
-		}
+		// var mapTop = $("#map").offset().top - $(window).scrollTop();
+		// if (mapTop <= windowHeight*0.2) {
+	 //    	$('#lets-go').css('display', 'inline');
+		// 	$('#marseille-txt').addClass('animated zoomIn');
+		// }
+		// if (letsGo == true) {
+		// 	$('#lets-go').css('display', 'inline');
+		// }
 
 
 	});

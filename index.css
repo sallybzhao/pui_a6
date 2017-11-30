@@ -49,6 +49,7 @@ body {
 
 #marseille-txt {
 	text-align: center;
+	display: none;
 }
 
 .list-group {
