@@ -47,9 +47,44 @@ body {
 	display: none;
 }
 
+.carousel {
+	margin: 0 auto 5%;
+}
+
+.carousel-inner {
+	max-height: 620px;
+	margin: 0 auto 15%;
+}
+
+.title {
+	font-size: 600%;
+	padding-top: 35%;
+	height: 620px;
+	text-align: center;
+	background-color: #d9f2eb;
+	margin: 0 auto 5%;
+}
+
+.site-txt {
+	font-size: 30%;
+	display: none;
+	width: 70%;
+}
+
+.arrow {
+	width: 10%;
+	position: relative;
+	bottom: 140px;
+	left: 82%;
+	background-color: #ffffff;
+	border-radius: 40px;
+	padding: 20px;
+}
+
 #marseille-txt {
 	text-align: center;
 	display: none;
+	clear: both;
 }
 
 .list-group {
@@ -66,6 +101,14 @@ body {
 
 .white {
 	color: #ffffff;
+}
+
+.mint {
+	color: #a0dece;
+}
+
+.b-mint {
+	background-color: #d9f2eb;
 }
 
 

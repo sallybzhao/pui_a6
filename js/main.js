@@ -61,9 +61,9 @@ $(document).ready( function() {
 	$(this).scroll(function() {
 	    if( $(this).scrollTop() <= 1000 ) {
 	        // check scroll status and change image brightness
-	        if ($(this).scrollTop() <= 20 ) {
+	        if ($(this).scrollTop() <= 30 ) {
 	        	$('#france-hero').css( "filter",'brightness(0%)' );
-	        } else if ($(this).scrollTop() <= 40) {
+	        } else if ($(this).scrollTop() <= 50) {
 	        	$('#france-hero').css( "filter",'brightness(30%)' );
 	        } else if ($(this).scrollTop() <= 60) {
 	        	$('#france-hero').css( "filter",'brightness(50%)' );
@@ -79,16 +79,15 @@ $(document).ready( function() {
 	    // marseille-txt animation
 	    marseille = checkMarseille(marseille);
 
-		// marseille animation
-		// var mapTop = $("#map").offset().top - $(window).scrollTop();
-		// if (mapTop <= windowHeight*0.2) {
-	 //    	$('#lets-go').css('display', 'inline');
-		// 	$('#marseille-txt').addClass('animated zoomIn');
-		// }
-		// if (letsGo == true) {
-		// 	$('#lets-go').css('display', 'inline');
-		// }
+	    // flip destination cards
+	    $("#arrow-1").click( function() {
 
+	    	$("#header-1").addClass("animated flipOutY");
+	    	$("#header-1").css("display", "none");
+
+	    	$("#txt-1").css("display", "inline");
+	    	$("#txt-1").addClass("animated flipInY");
+	    });
 
 	});
 
@@ -108,7 +107,7 @@ function initialize() {
 	var locations = [
 	    ['Cathedrale de la Major', 43.2990273, 5.3654427, 1],
 	    ['Vieux Port', 43.293802, 5.372858, 2],
-	    ['Four des Navettes', 43.290699, 5.364259, 3],
+	    // ['Four des Navettes', 43.290699, 5.364259, 3],
 	    ['Vallon des Auffes', 43.285771, 5.350088, 4],
 	    ['Notre Dame de la Garde', 43.284022, 5.369065, 5]
 	];
